@@ -7,16 +7,10 @@ export type Spot = {
     };
     acf: {
         store_name: string;
+        store_exp: string;
         latitude: string;
         longitude: string;
-        store_image: {
-            url: string;
-            sizes: {
-                thumbnail: string;
-                medium: string;
-                larget: string;
-            };
-        };
+        store_image: string | boolean
     };
 };
 

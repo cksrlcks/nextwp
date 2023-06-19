@@ -3,11 +3,12 @@ import React from "react";
 import useSWR from "swr";
 import BannerSlide from "./BannerSlide";
 import { Banner } from "@/service/banner";
+import styled from "styled-components";
 
 export default function Banner() {
     const { data: banners, error } = useSWR<Banner[]>("/api/banner");
     return (
-        <div className="side-banner">
+        <BannerBlock>
             <BannerSlide>
                 {banners &&
                     banners.map((banner) => (
@@ -16,6 +17,13 @@ export default function Banner() {
                         </figure>
                     ))}
             </BannerSlide>
-        </div>
+        </BannerBlock>
     );
 }
+
+const BannerBlock = styled.div`
+    width: 200px;
+    position: fixed;
+    left: calc(50% - 520px);
+    top: 20px;
+`

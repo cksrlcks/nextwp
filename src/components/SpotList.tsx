@@ -19,10 +19,10 @@ export default function SpotList() {
             });
     }, []);
     return (
-        <div>
+        <ul>
             {spots.map((spot) => (
                 <SpotItem key={spot.id} data={spot} />
             ))}
-        </div>
+        </ul>
     );
 }

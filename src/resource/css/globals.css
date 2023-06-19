@@ -15,15 +15,15 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
+html{
+    font-size:62.5%
+}
 html,
 body {
     height: 100%;
 }
 body {
     color: rgb(var(--foreground-rgb));
-}
-
-.app {
 }
 
 .app-inner {
@@ -33,11 +33,4 @@ body {
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     position: relative;
-}
-
-.side-banner {
-    width: 200px;
-    position: fixed;
-    left: calc(50% - 520px);
-    top: 20px;
 }
